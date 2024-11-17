@@ -5,7 +5,7 @@ module.exports = {
     title: 'Brittany Chiang',
     description:
       'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://vercel.com/n1troxxxs-projects/my-portfolio/J6z5Sqy5PsiFo6XacBzfUCjrJ6dZ?filter=errors#:~:text=my%2Dportfolio%2Dgit%2Dmain%2Dn1troxxxs%2Dprojects.vercel.app', // No trailing slash allowed!
+    siteUrl: 'khala.se', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
@@ -19,7 +19,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     {
       module.exports = {
-  pathPrefix: "/my-portfolio", // Adjust this to your repository name
+  pathPrefix: "/myportfolio", // Adjust this to your repository name
   plugins: [
     // Your plugins
   ],
