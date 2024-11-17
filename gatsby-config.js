@@ -18,6 +18,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
+      module.exports = {
+  pathPrefix: "/repository-name", // Adjust this to your repository name
+  plugins: [
+    // Your plugins
+  ],
+};
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Brittany Chiang',
