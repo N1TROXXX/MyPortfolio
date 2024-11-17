@@ -6,6 +6,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/bchiang7/v4"
+    "engines": {
+    "node": "16.x"
   },
   "keywords": [
     "gatsby"
