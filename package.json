@@ -1,13 +1,13 @@
 {
   "name": "v4",
-  "description": "Pers' alkhazishvili"
-}
+  "description": "Pers' alkhazishvili",
   "version": "1.0.0",
   "author": "Brittany Chiang <brittany.chiang@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/bchiang7/v4"
-    "engines": {
+  },
+  "engines": {
     "node": "16.x"
   },
   "keywords": [
