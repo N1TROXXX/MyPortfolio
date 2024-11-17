@@ -1,1 +1,5 @@
-20.0.0
+$ echo "20.0" > .nvmrc
+
+$ echo "lts/*" > .nvmrc # to default to the latest LTS version
+
+$ echo "node" > .nvmrc # to default to the latest version
