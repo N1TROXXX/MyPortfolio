@@ -62,7 +62,13 @@ const Hero = () => {
   
   const one = <h1>Hi, I'm</h1>;
   const two = <h2 className="big-heading">Lasha Alkhazishvili</h2>;
-  const three = <h2 className="big-heading">Front-End Developer</h2>;
+  const three = <p className="text-[--textLight] md:text-[24px] font-[400]">
+      I'm{' '}
+      <span className="inline bg-white text-gray-500 font-bold px-2 rounded-lg">
+        full stack
+      </span>{' '}
+      developer based in Tbilisi, Georgia
+    </p>
   const four = (
     <>
       <p>    
