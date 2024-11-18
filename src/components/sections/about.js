@@ -135,12 +135,15 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello, I’m [Lasha] – Full Stack Developer
+              As a Full Stack Developer, I have a comprehensive skill set that spans both front-end and back-end development. 
+              I work with technologies like JavaScript and Python, and have experience using tools such as the React framework. 
+              My expertise also includes database management and designing responsive interfaces that work seamlessly across all screen sizes.
+              What I love most about web development is how it continually challenges me to expand my knowledge and refine my skills. 
+              The ever-evolving nature of the field keeps me motivated and engaged, always pushing me to stay up-to-date with the latest tools and techniques.
             </p>
 
+                
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
               <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
