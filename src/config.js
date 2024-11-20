@@ -1,26 +1,26 @@
 module.exports = {
-  email: 'brittany.chiang@gmail.com',
+  email: 'INFO@ALKHAZISHVILI.COM',
 
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/N1TROXXX',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.instagram.com/alkhaz_a',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      name: 'X',
+      url: 'https://X.com/bchiang7',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://www.linkedin.com/in/alkhazishvili',
     },
     {
       name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      url: 'https://codepen.io/N1TROXXX',
     },
   ],
 
@@ -34,7 +34,7 @@ module.exports = {
       url: '/#jobs',
     },
     {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
     },
     {
@@ -44,7 +44,7 @@ module.exports = {
   ],
 
   colors: {
-    green: '#64ffda',
+    green: '#1b17eb',
     navy: '#0a192f',
     darkNavy: '#020c1b',
   },
