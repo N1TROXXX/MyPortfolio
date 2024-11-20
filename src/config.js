@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'X',
-      url: 'https://X.com/bchiang7',
+      url: 'https://X.com/alkhazishvili2',
     },
     {
       name: 'Linkedin',
@@ -44,8 +44,8 @@ module.exports = {
   ],
 
   colors: {
-    green: '#1b17eb',
-    navy: '#0a192f',
+    green: '#64ffda',
+    navy: '#1b17eb',
     darkNavy: '#020c1b',
   },
 
