@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Provide basic, default focus styles.*/
   :focus {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--purple);
     outline-offset: 3px;
   }
 
@@ -46,14 +46,14 @@ const GlobalStyle = createGlobalStyle`
     focus.
   */
   :focus-visible {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--yellow);
     outline-offset: 3px;
   }
 
   /* Scrollbar Styles */
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--dark-slate) var(--navy);
+    scrollbar-color: var(--blue) var(--green-tint);
   }
   ::-webkit-scrollbar {
     width: 12px;
@@ -191,10 +191,8 @@ const GlobalStyle = createGlobalStyle`
     &:before {
       position: relative;
       bottom: 4px;
-      counter-increment: section;
-      content: '0' counter(section) '.';
       margin-right: 10px;
-      color: var(--green);
+      color: var(--yellow);
       font-family: var(--font-mono);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
       font-weight: 400;
@@ -390,14 +388,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .overline {
-    color: var(--green);
+    color: var(--yellow);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
   }
 
   .subtitle {
-    color: var(--green);
+    color: var(--yellow);
     margin: 0 0 20px 0;
     font-size: var(--fz-md);
     font-family: var(--font-mono);
