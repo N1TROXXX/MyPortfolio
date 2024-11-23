@@ -1,0 +1,13 @@
+{
+    "data": {
+        "site": {
+            "siteMetadata": {
+                "defaultTitle": "Hi, I'm Lasha - Full-stack Developer",
+                "defaultDescription": "Hi, I'm a full-stack Developer. I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.",
+                "siteUrl": "https://alkhazishvili.com",
+                "defaultImage": "/og.png",
+                "twitterUsername": "@alkhaz_a"
+            }
+        }
+    }
+}

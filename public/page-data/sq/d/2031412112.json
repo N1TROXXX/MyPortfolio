@@ -1,0 +1,151 @@
+{
+    "data": {
+        "featured": {
+            "edges": [
+                {
+                    "node": {
+                        "frontmatter": {
+                            "title": "HemmaHarmoni",
+                            "cover": {
+                                "childImageSharp": {
+                                    "gatsbyImageData": {
+                                        "layout": "constrained",
+                                        "placeholder": {
+                                            "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAADw0lEQVQ4y22TC2/TZhSG8zf3A5D2F6aNoQIttEUDJoQYF01s7WClhXawia2FFW0tLU0vawtrrk3TJI7vjhMnjp34Qd/npEkplh6d833yec97juXEzAeVqe0jpneKMv76XuFpxmIubUhm0yZzaZMnKYOFnMODjQJjbytc3dC4tqnz3ZYuo2A8qZOYPdARon0e7ysSITCbMqSYiAt5hwfrWS4sZZjYazC+bUvRiaQuGe+RmOs56PPTepr7y9vMpw0WspYUns/Z3Hub4fxShslXe9x9PMu95V2u7ThceadKYUHssOdEukkZ/FlwWCw4vDpy+OvQluNP7ZQYWfyfq7se1397w9yjaR7PP+X+QY3RdZXxpPZ5h0L0Rc7ij7zN85zFs4zJs7TJzZU8o2tVbrz3GPn5CV/e+IWv7kzxw57O6DvtRPDKhnZ25PlMjPggwt2jfYWxf4+Y3La58DrLuW9v88XkQ87dmuHr3/e5umkwkdS4uK6yXGqcHnkYubusxa3VPJfXFMY3dUbXFL55neXCmzyXV8tcWi0zsakzsqbyKOUgntMOU4PRn2VtftwocHE5J91NbBpyrMkti8ktU54FY+80bv9n4rY7saDRDBhG7+O1OTJcjusBWd0lo7mUGyHHbjumHlCqBxy5ATU/FutGEQk+efxORNNvUy4ekcukCf0WqlJGKR333oj43BNF8X1CJH1EB9OyUVQNpVqlXKlQ1TTsWg3bcTBMU6Lruoxes4nQicVijUS/a79DFAZ0A5+w3ZK5dNTtEIahpO+mnw+7kw6HLzrdLiulOi8O6yyXPP4ueTzPu6wqHt1u/I5hGNi2LXPP80416Y08ONS8JucXPzC6YXB9S+fmtsGldZU7u+aJ4P7+PoVCQebJZFI26AsKmSGHccGTTI3vdwzu7pmSWzsG0we23JeuaaiqiqIoaJpGEARnR+477Eer1aHqhWjNDnozzp3eunzfpx0EEpF3Oh1pY/BhIeEGMCCiEYIXRjTDLnU/xI8gX1JIHyt4EZheG6sZ4oZIakF0Uitiwm7DgAgrgHrQwQm66FYDq97i2PbIqg5Fw2Vj74Dk+xRF3aHWiWv6tSImnACcIMLpXTT8Fi9LLWayCtdmFni5uoPYVNGokVd0ClWTw6pBplSl6jYR9UJMagRSMBaLBSNq7S7/VBosHRs8XD1gZW2ZcilFXnVIFytydEG2rFKxG9TCnmBPNGGLDp/ghdDsgA/Uu2D6oLgtNE/856HE8qPBqoJBTIh91duncYcQ50Yg6J6hLunVBTEfAfDLRA6ZfP0SAAAAAElFTkSuQmCC"
+                                        },
+                                        "images": {
+                                            "fallback": {
+                                                "src": "/static/cea37e120a47a633e15526b34fcdca1c/fdabf/halcyon.png",
+                                                "srcSet": "/static/cea37e120a47a633e15526b34fcdca1c/bbf8b/halcyon.png 175w,\n/static/cea37e120a47a633e15526b34fcdca1c/25723/halcyon.png 350w,\n/static/cea37e120a47a633e15526b34fcdca1c/fdabf/halcyon.png 700w,\n/static/cea37e120a47a633e15526b34fcdca1c/1c45a/halcyon.png 1400w",
+                                                "sizes": "(min-width: 700px) 700px, 100vw"
+                                            },
+                                            "sources": [
+                                                {
+                                                    "srcSet": "/static/cea37e120a47a633e15526b34fcdca1c/a8381/halcyon.avif 175w,\n/static/cea37e120a47a633e15526b34fcdca1c/7fa8a/halcyon.avif 350w,\n/static/cea37e120a47a633e15526b34fcdca1c/d2202/halcyon.avif 700w,\n/static/cea37e120a47a633e15526b34fcdca1c/d3869/halcyon.avif 1400w",
+                                                    "type": "image/avif",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                },
+                                                {
+                                                    "srcSet": "/static/cea37e120a47a633e15526b34fcdca1c/77242/halcyon.webp 175w,\n/static/cea37e120a47a633e15526b34fcdca1c/1beb1/halcyon.webp 350w,\n/static/cea37e120a47a633e15526b34fcdca1c/9c85f/halcyon.webp 700w,\n/static/cea37e120a47a633e15526b34fcdca1c/2b5bb/halcyon.webp 1400w",
+                                                    "type": "image/webp",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                }
+                                            ]
+                                        },
+                                        "width": 700,
+                                        "height": 778
+                                    }
+                                }
+                            },
+                            "tech": [
+                                "HTML",
+                                "Javascript",
+                                "CSS"
+                            ],
+                            "github": "https://github.com/n1troxxx",
+                            "external": "https://flytt.vercel.app/",
+                            "cta": null
+                        },
+                        "html": "<p>A professional cleaning company website, built with HTML, CSS, and JavaScript, featuring a clean, responsive design to showcase services and provide a seamless user experience.</p>"
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "title": "Restaurant Telavi",
+                            "cover": {
+                                "childImageSharp": {
+                                    "gatsbyImageData": {
+                                        "layout": "constrained",
+                                        "placeholder": {
+                                            "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD+klEQVQ4yx2LZ1NaCQBFn/SOYIkUG13AJ6FpQAw+OqIU8aEICGJbScjuTjLZJJPMftnM/oD9v2cnfrhz75k5V7i9GdNqtWk223TKEtetBvXSIX6/j1dON/VanePDQxKvYxztejmVskjZGL3yPrN+npR/mXgkwI53C4fLieB0uXBtbJBIxEnGRAI+D75NB16vB5fLRTDgR4yGiUZ38HnWEXeDxPfCxMQI+zEf6XiIaMiD1WJEazIhFMsllhxuDrMZ8pkM3U6bTjVP5iBLJCySOzoiFvCzG4sjiiGmcoFmtUC9XufpbsToqsdZTsS9YmZz3YEQP8gQFfd4fzfi4emex+cZvfMO1coJb48kej2Zq26XWkHi/mHKZDwkn8si7oXJZZN0CjlODxOkA+tkdwMI7rDIjXzOzdkJV6MbBuMp560mZ41TKgWJm36X6bDPsHfO87BDp3pEMi4ST8aJBjeIi1scHyQ5LeZpVEoIw8mUx4cH5vMP/DZ7h3x1zWEuz2mtQSaV5vKiw13/gst2g3o6iHxS5KJ5Sr9ZZzZq0m7XGFy0aZ01SOWOEXrNMu2qxN8/fvDz50++f/2LyeSO9zctuoU97s/SfBsfM7+u8tTY5elCopJJsL1qx7+2SirkQUrtsblsRdAaEc6lCKelNO8nZwx6Na77A4bDW8bDS24HMqPLJrKcpX8iUs8G6Q+uGUzuGIxv+PdjEykRRVyyE3Y5CbvdCAnfMoNOgUI+gz8UoNvt8vnrVz59+cZ8/ifjkYwvvMryKzMmk5o3uTRX/QGPsxn//TPj+7fPNItl1i1WNm02BJXehMFowmRfYWnJxsFBmtHklunzM8O7B+b3E0qJGPs+N5VdL0fZDB35ksf5H1xPnznv9ogEQ5j1RowGM4Kg1qHU6tHrdNjsS9hW1lBpDHj8IWLJfWrlItV6g0K5QrFaRypVyB4dExFjOJ0utHojCwoNi0YzNvMigsG8yIZjlbB3k0AwSCq9z7Y3gMloRKlQIiyoEIQFFAsKFILiZSt/sSBwEItRPX5LJBxi0WJF8cvtyTKz53cU6k2qrS4Xl30urq6p1ars+bbIRQIkoxG2XU68TgcHW8tEVgzseL18+jDny+9zPt4NeDivcpyIIrQ7LSqlIq+TabJSkbfFMtWTE6TcIW8SrxHDO2x6/fg826R8a0h+G6t6FYmdELdym0FPZix3mXTPmHZqCFqNGqVigV9tMZswmYwYdFp0GjUmowGdTotarUKrVmPUql48lUqNWqV8cXRaDXqtFq1Gg0atQlApFS9Ht8uJ3bbIotXyErvNhtViZsluw6DXseFwsmR3YzY7sFqdWCwOTOY1DIZX6PWr6LQ61CoF/wPEfwlfci+hvQAAAABJRU5ErkJggg=="
+                                        },
+                                        "images": {
+                                            "fallback": {
+                                                "src": "/static/e9fa4326a38380fce1947016e1033065/fded6/demo.png",
+                                                "srcSet": "/static/e9fa4326a38380fce1947016e1033065/7e2e8/demo.png 175w,\n/static/e9fa4326a38380fce1947016e1033065/93076/demo.png 350w,\n/static/e9fa4326a38380fce1947016e1033065/fded6/demo.png 700w",
+                                                "sizes": "(min-width: 700px) 700px, 100vw"
+                                            },
+                                            "sources": [
+                                                {
+                                                    "srcSet": "/static/e9fa4326a38380fce1947016e1033065/d6150/demo.avif 175w,\n/static/e9fa4326a38380fce1947016e1033065/2e65d/demo.avif 350w,\n/static/e9fa4326a38380fce1947016e1033065/72c49/demo.avif 700w",
+                                                    "type": "image/avif",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                },
+                                                {
+                                                    "srcSet": "/static/e9fa4326a38380fce1947016e1033065/7ea74/demo.webp 175w,\n/static/e9fa4326a38380fce1947016e1033065/74679/demo.webp 350w,\n/static/e9fa4326a38380fce1947016e1033065/67294/demo.webp 700w",
+                                                    "type": "image/webp",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                }
+                                            ]
+                                        },
+                                        "width": 700,
+                                        "height": 575
+                                    }
+                                }
+                            },
+                            "tech": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP"
+                            ],
+                            "github": "https://github.com/n1troxxx",
+                            "external": "https://restaurant-telavi.vercel.app/",
+                            "cta": null
+                        },
+                        "html": "<p>A stylish and responsive restaurant website showcasing a diverse menu, elegant design, and user-friendly navigation, built with modern web technologies for a seamless dining experience.</p>"
+                    }
+                },
+                {
+                    "node": {
+                        "frontmatter": {
+                            "title": "Khala Winery 2024",
+                            "cover": {
+                                "childImageSharp": {
+                                    "gatsbyImageData": {
+                                        "layout": "constrained",
+                                        "placeholder": {
+                                            "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAADoklEQVQ4y6WT22scdRTHh+I/UHwq1Zf64HvwxUrxQcESg5cnoVCtghVvBcmLK6kvvokipCVNqYttgnFTpNUgZm1sSE2bNLsrZu+XyXZ3due6szv3vc3O/L4yvyZ1aaMYcuDH+f1+58fnnPM9M4xpWsTWmkRVm0RttqjXNIO02x1SFyTCCyIRRZFwHEdUVSWmaRLDCOJtYlkmkSSZiAJHDEOnMaapymgIFUgCh3ptC7LEo86VIEsceL4ORWlAURSIoohWqwXDMNBuO1hfuwuO42CaJgxDp/fBnqney5J8do2kN5dJZnOZlPIxwhbi9CyJFWLbDs1s2zb1mqYRzxuQycnzZH19nei6TliWJY7j0MqZOpdH5q8l5JLLKGRvo1yMgy1soJBZpXeKVIFtO9tV6NC0FjzPw8TE54hGoyixLGZmZjEYDKBpGphMJoU/EzEkEhuIx9aQSMSQSm0in89i+fdFbGzchSwrsCwLVgC2Hfg+wfHjowiHw0il0giFPqNJKLBcLiObzSGVToNlt6gvFAooFksoFEsoFotQVRWmacCwLbT7ffBCHYcOHcbExFlcuTKD0dExuK4LXdfBCIKAapWjAgfwSqUCnufRbDZhWSa63S6FabqJUvoiWvVzuDD1FRiGwdjYGI4dex5PHH4SyWSSvmVu/jqF8ORJJBOL6PYGVCfanmXRyem6Bsu00ev6aEr3oKtpjI+HKPDIkadw8ODjOHDgMUQiEdo2E3wetUoWTVWCbdt09DtA0zLhOB2IjTK+vvoa5m58AVmrYfzTj/HBRyFMTU/jzJkQvpuJYGVlBb1eHwy2jRDA9zwQQh6sgefS2G/xCxh5h8HJsyP4Zv40nnvlaXx7cQG379zBiRPvUeitP1bp2wfA3SyABtayRCTZVQiyhKpUwieh9/Hs0Zfw6utv4Nz5aUTmf4QoyveBjUYDjYZCh1Kr1agOw7Ad/7DVeR6SFED8nfT0LdPSTTRUlX4awS82DBre+74Hn/jUE/yTxO330Ot1qFz3W9YFupFkhQ5luN3h6h5N4D9SPa2wryv0sBi9gYWfF2il/9Xqw3IML1qh6wJup4LT776NkZFncP36TzTgbU98r8bEc7/g2tKXePOtU3jhxZcxNze/P2AsF8W1m5dw6XIYs7NXkc3laWA3jf4X0PcAtwd0Oj0MBu6uA9kTUBS2kNq8hWql+K9C763l1e/xQ/hD5FNL2616+6qSCbTyvAHVbL/tBsC/AcdyQbYIRGwLAAAAAElFTkSuQmCC"
+                                        },
+                                        "images": {
+                                            "fallback": {
+                                                "src": "/static/13932261ac3b5cadb54ff5ea0ba35612/f0731/course-card.png",
+                                                "srcSet": "/static/13932261ac3b5cadb54ff5ea0ba35612/85226/course-card.png 175w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/a8263/course-card.png 350w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/f0731/course-card.png 700w",
+                                                "sizes": "(min-width: 700px) 700px, 100vw"
+                                            },
+                                            "sources": [
+                                                {
+                                                    "srcSet": "/static/13932261ac3b5cadb54ff5ea0ba35612/2777d/course-card.avif 175w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/c305d/course-card.avif 350w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/1c028/course-card.avif 700w",
+                                                    "type": "image/avif",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                },
+                                                {
+                                                    "srcSet": "/static/13932261ac3b5cadb54ff5ea0ba35612/f2034/course-card.webp 175w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/e4503/course-card.webp 350w,\n/static/13932261ac3b5cadb54ff5ea0ba35612/3a62b/course-card.webp 700w",
+                                                    "type": "image/webp",
+                                                    "sizes": "(min-width: 700px) 700px, 100vw"
+                                                }
+                                            ]
+                                        },
+                                        "width": 700,
+                                        "height": 754
+                                    }
+                                }
+                            },
+                            "tech": [
+                                "HTML",
+                                "Javascript",
+                                "CSS",
+                                "Wordpress"
+                            ],
+                            "github": null,
+                            "external": "https://www.newline.co/courses/build-a-spotify-connected-app",
+                            "cta": "https://www.newline.co/courses/build-a-spotify-connected-app"
+                        },
+                        "html": "<p>A beautifully crafted WordPress website dedicated to wine-making, featuring elegant design, rich visuals, and intuitive navigation. It highlights the art of winemaking with sections for vineyard history, wine collections, tasting events, and online purchasing, all optimized for responsiveness and SEO.</p>"
+                    }
+                }
+            ]
+        }
+    }
+}
