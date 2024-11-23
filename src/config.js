@@ -11,7 +11,7 @@ module.exports = {
       url: 'https://www.instagram.com/alkhaz_a',
     },
     {
-      name: 'X',
+      name: 'Twitter',
       url: 'https://X.com/alkhazishvili2',
     },
     {
@@ -26,21 +26,18 @@ module.exports = {
 
   navLinks: [
     {
-      name: 'About',
-      url: '/#about',
-    },
-    {
-      name: 'Experience',
-      url: '/#jobs',
-    },
-    {
       name: 'Projects',
       url: '/#projects',
+    },
+    {
+      name: 'About Me',
+      url: '/#about',
     },
     {
       name: 'Contact',
       url: '/#contact',
     },
+
   ],
 
   colors: {
