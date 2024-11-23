@@ -1,6 +1,6 @@
 ---
 date: '2018-12-18'
-title: 'Spotify Profile'
+title: 'Sspotify Profile'
 github: 'https://github.com/bchiang7/spotify-profile'
 external: 'https://spotify-profile.herokuapp.com/'
 tech:
