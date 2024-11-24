@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Restaurant Telavi'
-cover: './demo.png'
+cover: './telavi.png'
 github: 'https://github.com/n1troxxx'
 external: 'https://restaurant-telavi.vercel.app/'
 tech:
