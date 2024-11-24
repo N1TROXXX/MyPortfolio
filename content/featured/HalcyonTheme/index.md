@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'HemmaHarmoni'
-cover: './halcyon.png'
+cover: './hemmaharmoni.png'
 github: 'https://github.com/n1troxxx'
 external: 'https://flytt.vercel.app/'
 tech:
