@@ -54,7 +54,7 @@ const HeroText = styled.p`
   letter-spacing: 1.2px;
   line-height: 1.5;
   position: absolute; // Position absolute for placement at top left
-  top: 218px; // Adjust to position it further down from the top
+  top: 300px; // Adjust to position it further down from the top
   left: 115px; // Keep it on the left
 
   @media (min-width: 768px) {
@@ -142,7 +142,7 @@ const ScrollButton = styled.button`
   font-size: 15px;
   font-weight: bold;
   color: white;
-  background-color: var(--slate);
+  background-color: var(--navy);
   border: blue;
   border-radius: 5px;
   cursor: pointer;
@@ -184,10 +184,10 @@ const Hero = () => {
       <HeroContent>
         <HeroHeading>Lasha Alkhazishvili</HeroHeading> {/* Starts below the "L" of "Lasha" */}
         <HeroDescription>
-          I'm <span className="inline">a Full-Stack</span> Developer based in Stockholm
+          I'm a <span className="inline">Full-Stack</span> Developer based in Stockholm
         </HeroDescription>
         <ScrollButton onClick={scrollToAbout}>
-          Scroll to About
+          About Me
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M12 16.5l-6-6h12z" />
           </svg>
