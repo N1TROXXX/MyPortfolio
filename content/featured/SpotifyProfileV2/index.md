@@ -1,16 +1,13 @@
 ---
 date: '3'
-title: 'Build a Spotify Connected App'
-cover: './course-card.png'
-external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
-cta: 'https://www.newline.co/courses/build-a-spotify-connected-app'
+title: 'Khala Winery 2024'
+cover: './khalawinery.png'
+external: 'https://www.alkhazishvili.com'
+cta: 'https://www.alkhazishvili.com'
 tech:
-  - React
-  - Express
-  - Spotify API
-  - Styled Components
+  - Wordpress
+  - PHP
+
 ---
 
-Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-
-Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+A beautifully crafted WordPress website dedicated to wine-making, featuring elegant design, rich visuals, and intuitive navigation. It highlights the art of winemaking with sections for vineyard history, wine collections, tasting events, and online purchasing, all optimized for responsiveness and SEO.
