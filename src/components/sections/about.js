@@ -23,26 +23,29 @@ const StyledText = styled.div`
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
+    grid-gap: 2 10px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
     overflow: hidden;
     list-style: none;
 
     li {
       position: relative;
-      margin-bottom: 10px;
-      padding-left: 20px;
+      margin-bottom: 14px;
+      padding-left: 30px;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
-
+      font-size: var(--18px);
+    
       &:before {
         content: '▹';
         position: absolute;
         left: 0;
+        top: 50%; /* Centers the symbol vertically */
+        transform: translateY(-50%); /* Aligns with the middle of the text */
         color: var(--yellow);
-        font-size: var(--fz-sm);
-        line-height: 12px;
+        font-size: var(--18px); /* Match text font size for alignment */
+        line-height: 1; /* Prevent excessive spacing */
+        vertical-align: middle; /* Align to the middle of the line */
       }
     }
   }
@@ -50,21 +53,24 @@ const StyledText = styled.div`
 
 const StyledPic = styled.div`
   position: relative;
-  max-width: 300px;
+  max-width: 400px; /* Increase max width for desktop screens */
+  margin: 0 auto;
 
   @media (max-width: 768px) {
-    margin: 50px auto 0;
-    width: 100%;
+    max-width: 300px; /* Adjust width for smaller screens */
+    margin: 30px auto; /* Center the image */
   }
 
   .wrapper {
     ${({ theme }) => theme.mixins.boxShadow};
     display: block;
     position: relative;
-    width: 150%;
+    width: 100%; /* Maintain full width */
+    height: auto; /* Ensure height adjusts automatically */
+    aspect-ratio: 4 / 5; /* Wider and taller image */
     border-radius: 15px;
     background-color: var(--blue);
-    overflow: normal;
+    overflow: visible;
 
     &:hover,
     &:focus {
@@ -83,8 +89,9 @@ const StyledPic = styled.div`
 
     .img {
       position: relative;
-      width: 100%;
-      height: auto;
+      width: 100%; /* Ensures the image fits the wrapper's width */
+      height: 100%; /* Ensures the image scales to fill the wrapper */
+      object-fit: cover; /* Prevents stretching */
       border-radius: 15px;
       mix-blend-mode: normal;
       filter: none;
@@ -110,9 +117,9 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--white);
-      top: 20px;
-      left: 14px;
+      border: 5px solid var(--white);
+      top: 20px; /* Adjusted for alignment */
+      left: 25px;
       z-index: -1;
     }
   }
@@ -130,7 +137,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, [prefersReducedMotion]); // Include prefersReducedMotion in the dependency array
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['JavaScript', 'TypeScript', 'React', 'Python', 'Next.js', 'WordPress', 'Tailwind CSS', 'Git' ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

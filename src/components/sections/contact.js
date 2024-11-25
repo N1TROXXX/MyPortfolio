@@ -7,12 +7,12 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #transparent;  /* Dark slate background */
+  background: transparent;
   padding: 20px;
 `;
 
 const FormContainer = styled.div`
-  background: #transparent; /* Darker container background */
+  background: transparent;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -26,15 +26,9 @@ const FormContainer = styled.div`
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  @media (max-width: 768px) {
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -43,7 +37,11 @@ const Title = styled.h2`
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
-  color: #8892b0; /* Pink color */
+  color: #8892b0;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const Form = styled.form`
@@ -58,12 +56,16 @@ const Input = styled.input`
   border: 2px solid #ccc;
   border-radius: 8px;
   outline: none;
-  background-color: transparent;  /* Black background for input fields */
-  color: yellow;  /* Yellow text */
+  background-color: transparent;
+  color: yellow;
   transition: border-color 0.3s;
 
   &:focus {
-    border-color: #8892b0;  /* Pink border on focus */
+    border-color: #8892b0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `;
 
@@ -74,58 +76,57 @@ const TextArea = styled.textarea`
   border-radius: 8px;
   outline: none;
   resize: none;
-  background-color: transparent;  /* Black background for textarea */
-  color: #8892b0;  /* White text */
+  background-color: transparent;
+  color: #8892b0;
   transition: border-color 0.3s;
 
   &:focus {
-    border-color: #8892b0;  /* Pink border on focus */
+    border-color: #8892b0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `;
 
-const Button = styled.button`
+// Shared Button Style
+const ButtonBase = styled.button`
   padding: 12px;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bold;
   color: #fff;
-  background: #1e3c72;  /* Dark blue background */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-
-  &:hover {
-    background: #8892b0;  /* Lighter blue on hover */
-  }
-`;
-
-// New transparent button to open Gmail
-const GmailButton = styled.a`
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background: #1e3c72;  /* Dark blue background */
+  background: #1e3c72;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
-  display: inline-block;
-  transition: background 0.3s;
-  margin-top: 10px;
-  width: 100%;  /* Same width as the Send Message button */
+  width: 100%;
   box-sizing: border-box;
+  transition: background 0.3s, transform 0.3s;
 
   &:hover {
-    background: #8892b0;  /* Lighter blue on hover */
-    color: #fff;  /* Ensure text stays white on hover */
+    background: #8892b0;
+    transform: scale(1.02);
   }
 
   &:focus,
   &:active {
-    outline: none;  /* Remove focus outline */
-    color: #fff;  /* Ensure text stays white on focus and active states */
+    outline: none;
   }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px;
+  }
+`;
+
+// Styled Components for Specific Buttons
+const Button = styled(ButtonBase)``;
+
+const GmailButton = styled(ButtonBase).attrs({
+  as: "a",
+})`
+  text-decoration: none;
 `;
 
 const OrText = styled.div`
@@ -134,25 +135,33 @@ const OrText = styled.div`
   color: #aaa;
   margin: 20px 0;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 
-  &:before {
+  &:before,
+  &:after {
     content: "";
-    display: inline-block;
-    width: 45%;
+    flex: 1;
     height: 1px;
     background-color: #8892b0;
+  }
+
+  &:before {
     margin-right: 10px;
-    vertical-align: middle;
   }
 
   &:after {
-    content: "";
-    display: inline-block;
-    width: 45%;
-    height: 1px;
-    background-color: #8892b0;
     margin-left: 10px;
-    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 15px 0;
+
+    &:before,
+    &:after {
+      height: 0.5px;
+    }
   }
 `;
 
@@ -161,15 +170,27 @@ const ContactInfo = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  color: #gray;  /* Contact color */
+  color: gray;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const ContactInfoItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 5px 0;
   font-size: 26px;
+  gap: 10px;
 
   span {
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 22px;
   }
 `;
 
@@ -224,10 +245,8 @@ const ContactForm = () => {
           <Button type="submit">Send Message</Button>
         </Form>
 
-        {/* Or Text Between Buttons */}
         <OrText>Or</OrText>
 
-        {/* Transparent Gmail Button */}
         <GmailButton
           href={`mailto:info@alkhazishvili.com?subject=Message from ${formData.name}&body=${formData.message}`}
         >
