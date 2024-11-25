@@ -84,7 +84,7 @@ const ScrollButton = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: var(--blue);
+    background-color: var(--navy);
   }
 
   svg {
