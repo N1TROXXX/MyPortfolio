@@ -15,58 +15,23 @@ const bounceAnimation = keyframes`
 `;
 
 const StyledHeroSection = styled.section`
-  ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
-  padding: 0;
-  z-index: 20;
-  position: relative; // Keep relative positioning for absolute children
-
-  min-height: 100vh; // Keeps full viewport height for the hero section
-  height: 100vh;
-
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-    height: auto;
-    padding-top: var(--nav-height);
-  }
-`;
-
-const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; // Center everything for the main content
-  width: 100%;
-  max-width: 800px;
-  text-align: center; // Center text within content
-  position: relative; // Ensure relative positioning to adjust other elements
-
-  @media (min-width: 768px) {
-    align-items: center;
-  }
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
 `;
 
 const HeroText = styled.p`
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 20px); /* Scales with viewport width */
   color: var(--blue);
   font-family: 'FiraSans', sans-serif;
   margin: 0;
   font-weight: 700;
   letter-spacing: 1.2px;
   line-height: 1.5;
-  position: absolute; // Position absolute for placement at top left
-  top: 300px; // Adjust to position it further down from the top
-  left: 115px; // Keep it on the left
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 30px;
-  }
-
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
 
   &:hover {
     color: var(--white);
@@ -75,33 +40,18 @@ const HeroText = styled.p`
 `;
 
 const HeroHeading = styled.h1`
-  font-size: 30px;
+  font-size: clamp(40px, 5vw, 80px); /* Scales dynamically */
   font-family: var(--fontFira);
   font-weight: bold;
   color: white;
-  margin: 0;
-  padding-top: 60px; /* Adjust padding to start below the "Hi, I'm" text */
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 100px;
-    font-weight: 900;
-  }
+  margin: 10px 0;
 `;
 
 const HeroDescription = styled.div`
+  font-size: clamp(18px, 2vw, 24px);
   color: var(--slate);
-  font-size: 25px;
   font-weight: 900;
-  line-height: 1.2;
-  margin: -1rem 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  margin: 10px 0;
 
   .inline {
     background-color: white;
@@ -110,56 +60,37 @@ const HeroDescription = styled.div`
     padding: 0.4rem;
     border-radius: 18px;
   }
-
-  @media (min-width: 768px) {
-    font-size: 28px;
-  }
-
-  @media (min-width: 2024px) {
-    font-size: 22px;
-  }
 `;
 
 const HeroParagraph = styled.p`
-  font-size: 18px;
+  font-size: clamp(16px, 1.5vw, 18px);
   color: var(--navy);
   line-height: 1.6;
-  margin-top: 1rem;
   max-width: 600px;
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 22px;
-  }
+  margin: 20px auto;
 `;
 
-// Scroll Button with Bounce Animation
 const ScrollButton = styled.button`
-  padding: 0.5rem 0.5rem;
-  font-size: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
   background-color: var(--navy);
-  border: blue;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
   transition: background-color 0.3s;
-  margin-top: 1rem;
 
   &:hover {
     background-color: var(--blue);
   }
 
   svg {
-    margin-left: 0.5rem;
-    fill: white;
-    width: 35px;
-    height: 35px;
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
     animation: ${bounceAnimation} 1.5s infinite;
   }
 `;
@@ -172,28 +103,22 @@ const Hero = () => {
     }
   };
 
-  const paragraphText = (
-    <HeroParagraph>
-      I'm a Web Developer & Designer. I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.
-    </HeroParagraph>
-  );
-
   return (
     <StyledHeroSection>
-      <HeroText>Hi, My Name is</HeroText> {/* Positioned at the top-left and moved down */}
-      <HeroContent>
-        <HeroHeading>Lasha Alkhazishvili</HeroHeading> {/* Starts below the "L" of "Lasha" */}
-        <HeroDescription>
-          I'm a <span className="inline">Full-Stack</span> Developer based in Stockholm
-        </HeroDescription>
-        <ScrollButton onClick={scrollToAbout}>
-          About Me
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 16.5l-6-6h12z" />
-          </svg>
-        </ScrollButton>
-        {paragraphText}
-      </HeroContent>
+      <HeroText>Hi, My Name is</HeroText>
+      <HeroHeading>Lasha Alkhazishvili</HeroHeading>
+      <HeroDescription>
+        I'm a <span className="inline">Full-Stack</span> Developer based in Stockholm
+      </HeroDescription>
+      <HeroParagraph>
+        I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.
+      </HeroParagraph>
+      <ScrollButton onClick={scrollToAbout}>
+        About Me
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 16.5l-6-6h12z" />
+        </svg>
+      </ScrollButton>
     </StyledHeroSection>
   );
 };
