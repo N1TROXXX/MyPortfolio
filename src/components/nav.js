@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
-    props.scrollDirection === 'up' &&
+      props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -43,7 +43,7 @@ const StyledHeader = styled.header`
       `};
 
     ${props =>
-    props.scrollDirection === 'down' &&
+      props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -59,7 +59,6 @@ const StyledNav = styled.nav`
   width: 100%;
   color: var(--red);
   font-family: var(--font-mono);
-  counter-reset: item 0;
   z-index: 12;
 
   .logo {
@@ -126,13 +125,13 @@ const StyledLinks = styled.div`
     li {
       margin: 0 5px;
       position: relative;
-      counter-increment: item 1;
       font-size: var(--fz-xs);
 
       a {
         padding: 10px;
 
         &:before {
+          content: '▹'; /* Custom symbol for navigation */
           margin-right: 5px;
           color: var(--yellow);
           font-size: var(--fz-xxs);
@@ -168,7 +167,7 @@ const Nav = ({ isHome }) => {
       clearTimeout(timeout);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prefersReducedMotion]); // Added prefersReducedMotion as a dependency
 
   const timeout = isHome ? loaderDelay : 0;
   const fadeClass = isHome ? 'fade' : '';
