@@ -214,7 +214,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Background>
+    <Background id="contact"> {/* Add this id here */}
       <FormContainer>
         <Title>Contact Me</Title>
         <Form onSubmit={handleSubmit}>

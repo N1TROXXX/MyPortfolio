@@ -42,7 +42,7 @@ const StyledText = styled.div`
         left: 0;
         top: 50%; /* Centers the symbol vertically */
         transform: translateY(-50%); /* Aligns with the middle of the text */
-        color: var(--yellow);
+        color: var(--blue);
         font-size: var(--18px); /* Match text font size for alignment */
         line-height: 1; /* Prevent excessive spacing */
         vertical-align: middle; /* Align to the middle of the line */

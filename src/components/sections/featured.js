@@ -115,13 +115,13 @@ const StyledProject = styled.li`
     }
   }
 
-  .project-overline {
+  /* .project-overline {
     margin: 10px 0;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
-  }
+  } */
 
   .project-title {
     color: var(--lightest-slate);
@@ -160,6 +160,7 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
+     font-weight: bold;
 
     @media (max-width: 768px) {
       padding: 20px 0;
@@ -256,7 +257,7 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      background-color: var(--gray);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -348,7 +349,7 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Project
       </h2>
 
       <StyledProjectsGrid>
@@ -362,7 +363,7 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    
 
                     <h3 className="project-title">
                       <a href={external}>{title}</a>

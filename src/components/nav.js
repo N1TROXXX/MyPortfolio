@@ -2,108 +2,53 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo, IconHex } from '@components/icons';
+import logo from '../images/log.png'; // Import logo image (adjust path as needed)
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 11;
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
-  filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important;
-  backdrop-filter: blur(10px);
+  background-color: var(--transparent);
+  backdrop-filter: blur(3px);
   transition: var(--transition);
-
-  @media (max-width: 1080px) {
-    padding: 0 40px;
-  }
-  @media (max-width: 768px) {
-    padding: 0 25px;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    ${props =>
-      props.scrollDirection === 'up' &&
-      !props.scrolledToTop &&
-      css`
-        height: var(--nav-scroll-height);
-        transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
-      `};
-
-    ${props =>
-      props.scrollDirection === 'down' &&
-      !props.scrolledToTop &&
-      css`
-        height: var(--nav-scroll-height);
-        transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
-      `};
-  }
 `;
 
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: var(--red);
+  color: var(--blue); 
   font-family: var(--font-mono);
   z-index: 12;
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
-
     a {
       color: var(--navy);
-      width: 42px;
-      height: 42px;
       position: relative;
       z-index: 1;
+    }
 
-      .hex-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
-      }
+    /* Desktop only styles */
+    @media (min-width: 769px) {
+      display: flex;
+      position: relative;
+      z-index: 20; /* Ensures it's above other content */
+    }
 
-      .logo-container {
-        position: relative;
-        z-index: 1;
-        svg {
-          fill: none;
-          user-select: none;
-          @media (prefers-reduced-motion: no-preference) {
-            transition: var(--transition);
-          }
-          polygon {
-            fill: var(--navy);
-          }
-        }
-      }
-
-      &:hover,
-      &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
-      }
+    /* Mobile: Hide logo */
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `;
@@ -113,7 +58,7 @@ const StyledLinks = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    display: none;
+    display: none; /* Hide navigation links on mobile for simplicity */
   }
 
   ol {
@@ -125,25 +70,25 @@ const StyledLinks = styled.div`
     li {
       margin: 0 5px;
       position: relative;
-      font-size: var(--fz-xs);
-
+      font-size: var(--20px);
       a {
         padding: 10px;
-
-        &:before {
-          content: '▹'; /* Custom symbol for navigation */
-          margin-right: 5px;
-          color: var(--yellow);
-          font-size: var(--fz-xxs);
-          text-align: right;
+        &.active {
+          color: var(--highlight-color); // Active link color
         }
       }
     }
   }
 `;
 
+const LogoImage = styled.img`
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+`;
+
 const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
+  const [activeSection, setActiveSection] = useState('');
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -167,31 +112,44 @@ const Nav = ({ isHome }) => {
       clearTimeout(timeout);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prefersReducedMotion]); // Added prefersReducedMotion as a dependency
+  }, [prefersReducedMotion]);
 
-  const timeout = isHome ? loaderDelay : 0;
-  const fadeClass = isHome ? 'fade' : '';
-  const fadeDownClass = isHome ? 'fadedown' : '';
+  // Section tracking with IntersectionObserver
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // This enables smooth scrolling
+    });
+  };
 
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+        <a href="/" aria-label="home" onClick={(e) => { e.preventDefault(); scrollToTop(); }}>
+          <LogoImage src={logo} alt="Home Logo" />
         </a>
       ) : (
-        <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+        <Link to="/" aria-label="home" onClick={(e) => { e.preventDefault(); scrollToTop(); }}>
+          <LogoImage src={logo} alt="Home Logo" />
         </Link>
       )}
     </div>
@@ -208,7 +166,9 @@ const Nav = ({ isHome }) => {
                 {navLinks &&
                   navLinks.map(({ url, name }, i) => (
                     <li key={i}>
-                      <Link to={url}>{name}</Link>
+                      <Link to={url} className={activeSection === url.substring(1) ? 'active' : ''}>
+                        {name}
+                      </Link>
                     </li>
                   ))}
               </ol>
@@ -219,7 +179,7 @@ const Nav = ({ isHome }) => {
           <>
             <TransitionGroup component={null}>
               {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
+                <CSSTransition classNames="fade" timeout={loaderDelay}>
                   <>{Logo}</>
                 </CSSTransition>
               )}
@@ -231,9 +191,11 @@ const Nav = ({ isHome }) => {
                   {isMounted &&
                     navLinks &&
                     navLinks.map(({ url, name }, i) => (
-                      <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
+                      <CSSTransition key={i} classNames="fadedown" timeout={loaderDelay}>
                         <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                          <Link to={url}>{name}</Link>
+                          <Link to={url} className={activeSection === url.substring(1) ? 'active' : ''}>
+                            {name}
+                          </Link>
                         </li>
                       </CSSTransition>
                     ))}
@@ -243,7 +205,7 @@ const Nav = ({ isHome }) => {
 
             <TransitionGroup component={null}>
               {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
+                <CSSTransition classNames="fade" timeout={loaderDelay}>
                   <Menu />
                 </CSSTransition>
               )}

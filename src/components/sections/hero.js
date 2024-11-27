@@ -96,6 +96,15 @@ const ScrollButton = styled.button`
 `;
 
 const Hero = () => {
+  // Scroll to Home Section
+  const scrollToHome = () => {
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Scroll to About Section
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -104,7 +113,7 @@ const Hero = () => {
   };
 
   return (
-    <StyledHeroSection>
+    <StyledHeroSection id="home"> {/* Home section with id="home" */}
       <HeroText>Hi, My Name is</HeroText>
       <HeroHeading>Lasha Alkhazishvili</HeroHeading>
       <HeroDescription>
@@ -113,6 +122,16 @@ const Hero = () => {
       <HeroParagraph>
         I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.
       </HeroParagraph>
+      
+      {/* Home Button */}
+      <ScrollButton onClick={scrollToHome}>
+        Home
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 16.5l-6-6h12z" />
+        </svg>
+      </ScrollButton>
+      
+      {/* About Me Button */}
       <ScrollButton onClick={scrollToAbout}>
         About Me
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
