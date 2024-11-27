@@ -5,7 +5,7 @@ import { Layout, Hero, Featured, About, Contact } from '@components';
 
 
 const StyledMainContainer = styled.main`
-  counter-reset: section;
+
 `;
 
 const IndexPage = ({ location }) => (

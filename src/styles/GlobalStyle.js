@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     focus.
   */
   :focus-visible {
-    outline: 2px dashed var(--yellow);
+    outline: 2px dashed var(--blue);
     outline-offset: 3px;
   }
 
@@ -192,7 +192,7 @@ const GlobalStyle = createGlobalStyle`
       position: relative;
       bottom: 4px;
       margin-right: 10px;
-      color: var(--yellow);
+      color: var(--blue);
       font-family: var(--font-mono);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
       font-weight: 400;
@@ -259,7 +259,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--white); // Navigatiis linkebis Shida Feri
     }
 
     &.inline-link {
@@ -323,14 +323,14 @@ const GlobalStyle = createGlobalStyle`
           content: '▹';
           position: absolute;
           left: 0;
-          color: var(--green);
+          color: var(--pink);
         }
       }
     }
   }
 
   blockquote {
-    border-left-color: var(--green);
+    border-left-color: var(--blue);
     border-left-style: solid;
     border-left-width: 1px;
     margin-left: 0px;
@@ -370,7 +370,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      background-color: var(--green);
+      background-color: var(--blue);
       color: var(--navy);
       top: 0;
       left: 0;
@@ -384,7 +384,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #logo {
-    color: var(--green);
+    color: var(--blue);
   }
 
   .overline {
@@ -418,7 +418,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    color: var(--green);
+    color: var(--blue);
 
     .arrow {
       display: block;
