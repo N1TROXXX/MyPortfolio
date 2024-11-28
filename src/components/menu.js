@@ -118,13 +118,13 @@ const StyledSidebar = styled.aside`
   ol {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style: none;  /* Ensure no default list styling */
     width: 100%;
 
     li {
       position: relative;
       margin: 0 auto 20px;
-      counter-increment: item 1;
+      /* Removed the counter-increment to prevent numbering */
       font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
 
       @media (max-width: 600px) {
