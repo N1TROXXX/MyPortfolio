@@ -1,16 +1,35 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-// Keyframes for bounce animation (for the arrow)
+// Keyframes for animations
 const bounceAnimation = keyframes`
-  0%, 20%, 50%, 80%, 100% {
+  0%, 100% {
     transform: translateY(0);
   }
-  40% {
-    transform: translateY(-5px);
+  50% {
+    transform: translateY(-10px);
   }
-  60% {
-    transform: translateY(-3px);
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const scaleUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 `;
 
@@ -20,143 +39,145 @@ const StyledHeroSection = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  text-align: center;
   padding: 0 20px;
+  background: transparent;  /* No background */
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  z-index: 1;
+  overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 0 10px; // Reduce padding on smaller screens
+    padding: 0 10px;
   }
 `;
 
 const HeroText = styled.p`
-  font-size: clamp(14px, 2vw, 20px);
-  color: var(--blue);
-  font-family: 'FiraSans', sans-serif;
+  font-size: clamp(18px, 2vw, 22px);
+  color: rgba(255, 255, 255, 0.9); /* Slightly faded white */
+  font-weight: 600;
   margin: 0;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  line-height: 1.5;
-
-  &:hover {
-    color: var(--white);
-    transform: scale(1.05);
-  }
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: ${fadeIn} 1s forwards;
+  animation-delay: 0.5s;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.5); /* Glowing effect */
 
   @media (max-width: 768px) {
-    font-size: clamp(14px, 4vw, 18px); // Adjust font size for smaller screens
+    font-size: clamp(16px, 3vw, 20px);
   }
 `;
 
 const HeroHeading = styled.h1`
-  font-size: clamp(40px, 5vw, 80px);
-  font-family: var(--fontFira);
-  font-weight: bold;
+  font-size: clamp(60px, 6vw, 90px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   color: white;
-  margin: 10px 0;
+  margin: 20px 0;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: ${scaleUp} 1s forwards;
+  animation-delay: 1s;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.5); /* Soft glowing effect */
 
   @media (max-width: 768px) {
-    font-size: clamp(30px, 8vw, 50px); // Reduce font size on mobile
+    font-size: clamp(45px, 8vw, 75px);
   }
 `;
 
 const HeroDescription = styled.div`
-  font-size: clamp(25px, 2vw, 24px);
-  color: var(--slate);
-  font-weight: 900;
-  margin: 10px 0;
+  font-size: clamp(20px, 2.5vw, 24px);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  margin: 15px 0;
+  opacity: 0;
+  animation: ${fadeIn} 1s forwards;
+  animation-delay: 1.5s;
 
-  .inline {
-    background-color: white;
-    color: #3d6e91;
-    font-weight: 700;
-    padding: 0.4rem 0.8rem;
-    border-radius: 25px;
-    border: 2px solid #3d6e91;
-    display: inline-block;
+  .highlight {
     position: relative;
-    animation: pulse 1.5s infinite alternate; /* Added pulse animation */
-    box-shadow: 0 0 15px rgba(61, 110, 145, 0.2); /* Subtle shadow effect */
-    
-    &:before {
-      content: '';
+    display: inline-block;
+    color: #3498db;  /* Blue color for the highlight */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    border: 2px solid #3498db;  /* Blue border */
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.6);  /* Blue glow effect */
+
+    &:hover {
+      background: #3498db;
+      color: white;
+      box-shadow: 0px 0px 20px rgba(52, 152, 219, 1);  /* Hover glow effect */
+    }
+
+    &::before {
+      content: "";
       position: absolute;
-      top: -4px;
-      left: -4px;
-      right: -4px;
-      bottom: -4px;
-      border-radius: 25px;
-      background: linear-gradient(45deg, rgba(61, 110, 145, 0.5), rgba(255, 255, 255, 0.1));
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 50%;
+      border: 2px solid #3498db;
       z-index: -1;
+      transition: all 0.3s ease;
     }
-    
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 15px rgba(61, 110, 145, 0.4);
-      }
-      100% {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(61, 110, 145, 0.7);
-      }
-    }
-  }
 
-  @media (max-width: 768px) {
-    font-size: clamp(20px, 4vw, 22px); // Adjust font size for mobile
+    &:hover::before {
+      border: 2px solid white;
+    }
   }
 `;
 
-const HeroParagraph = styled.p`
-  font-size: clamp(16px, 1.5vw, 18px);
-  color: var(--navy);
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 20px auto;
 
-  @media (max-width: 768px) {
-    font-size: clamp(14px, 3vw, 16px); // Slightly smaller on mobile
-    margin: 15px auto; // Adjust margin for smaller screens
-  }
-`;
-
-// Scroll Button with Navy and Blue Gradient
+// Add fade-in and scale-up animations to the button
 const ScrollButton = styled.button`
-  padding: 12px 24px;
+  padding: 12px 30px;
   font-size: 16px;
   font-weight: bold;
-  color: #FFFFFF; /* Pure white text color */
-  background: linear-gradient(45deg, var(--navy), var(--blue)); /* Gradient from navy to blue */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
-  border-radius: 50px; /* Rounded corners */
+  color: white;
+  background: transparent;
+  border: 2px solid #3498db;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease; /* Smooth transition for all effects */
-  backdrop-filter: blur(8px); /* Frosted glass effect */
+  transition: 0.3s ease;
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 768px) {
-    font-size: 14px; /* Smaller font size for mobile */
-    padding: 10px 20px; /* Adjust padding for mobile */
-  }
+  opacity: 0;
+  animation: ${fadeIn} 1s forwards, ${scaleUp} 1s forwards;
+  animation-delay: 2.0s; /* Delay it slightly after the rest */
 
   &:hover {
-    background: linear-gradient(45deg, var(--navy), var(--blue)); /* Keep the gradient on hover */
-    border-color: rgba(255, 255, 255, 0.7); /* Darker border on hover */
-    color: #FFFFFF; /* Brighter pure white text on hover */
-    transform: translateY(-2px); /* Subtle lifting effect */
+    background: white;
+    color: #3498db; /* Blue color on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   }
 
   svg {
-    margin-left: 8px;
+    margin-left: 10px;
     width: 24px;
     height: 24px;
-    animation: ${bounceAnimation} 1.5s infinite; /* Bounce effect on the arrow */
+    animation: ${bounceAnimation} 1.5s infinite;
+  }
 
-    @media (max-width: 768px) {
-      width: 18px; /* Smaller arrow on mobile */
-      height: 18px; /* Smaller arrow on mobile */
-    }
+  @media (max-width: 768px) {
+    padding: 10px 20px;
   }
 `;
 
@@ -174,12 +195,9 @@ const Hero = () => {
       <HeroText>Hi, My Name is</HeroText>
       <HeroHeading>Lasha Alkhazishvili</HeroHeading>
       <HeroDescription>
-        I'm a <span className="inline">Front-End</span> Developer based in Stockholm
+        I'm a <span className="highlight">Front-End</span> Developer based in Stockholm
       </HeroDescription>
-      <HeroParagraph>
-        I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.
-      </HeroParagraph>
-      
+
       {/* About Me Button */}
       <ScrollButton onClick={scrollToAbout}>
         About Me
