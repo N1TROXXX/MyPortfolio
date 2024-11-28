@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import styled from 'styled-components';
@@ -39,7 +38,8 @@ const StyledLoader = styled.div`
 const Loader = ({ finishLoading }) => {
   const [isMounted, setIsMounted] = useState(false);
 
-  const animate = () => {
+  // Wrapped the animate function with useCallback
+  const animate = useCallback(() => {
     const loader = anime.timeline({
       complete: () => finishLoading(),
     });
@@ -53,7 +53,7 @@ const Loader = ({ finishLoading }) => {
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
-        targets: '#logo #B',
+        targets: '#logo #A',
         duration: 700,
         easing: 'easeInOutQuart',
         opacity: 1,
@@ -73,18 +73,16 @@ const Loader = ({ finishLoading }) => {
         opacity: 0,
         zIndex: -1,
       });
-  };
+  }, [finishLoading]);
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
-    animate();
+    animate(); // Call the animate function
     return () => clearTimeout(timeout);
-  }, []);
+  }, [animate]); // Added animate to the dependency array
 
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
-      <Helmet bodyAttributes={{ class: `hidden` }} />
-
       <div className="logo-wrapper">
         <IconLoader />
       </div>
