@@ -42,7 +42,7 @@ const StyledSocialLinks = styled.div`
 const StyledCredit = styled.div`
   color: var(--light-slate);
   font-family: var(--font-mono);
-  font-size: var(--fz-xxs);
+  font-size: var(--fz-sm);
   line-height: 1;
 
   a {
@@ -67,8 +67,8 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit>
-        <div>Design inspiration by Brittany Chiang.</div>
-        <div>Built by Lasha Alkhazishvili.</div>
+        <div>Built by Lasha Alkhazishvili</div>
+        <div>Design inspiration by Brittany Chiang</div>
       </StyledCredit>
     </StyledFooter>
   );

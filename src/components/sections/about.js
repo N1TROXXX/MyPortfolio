@@ -23,7 +23,7 @@ const StyledText = styled.div`
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 2 10px;
+    grid-gap: 10px;
     padding: 0;
     margin: 30px 0 0 0;
     overflow: hidden;
@@ -34,18 +34,33 @@ const StyledText = styled.div`
       margin-bottom: 14px;
       padding-left: 30px;
       font-family: var(--font-mono);
-      font-size: var(--18px);
-    
+      font-size: 20x;
+      font-weight: 500;
+      color: var(--blue);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--blue); /* Smooth color transition on hover */
+        transform: translateY(-3px); /* Slight lift effect */
+        cursor: pointer;
+      }
+
       &:before {
         content: '▹';
         position: absolute;
         left: 0;
         top: 50%; /* Centers the symbol vertically */
         transform: translateY(-50%); /* Aligns with the middle of the text */
-        color: var(--blue);
-        font-size: var(--18px); /* Match text font size for alignment */
-        line-height: 1; /* Prevent excessive spacing */
-        vertical-align: middle; /* Align to the middle of the line */
+        color: var(--white);
+        font-size: 28px; /* Match text font size for alignment */
+        line-height: 1;
+        vertical-align: middle;
+        transition: all 0.3s ease;
+      }
+
+      /* Adding a subtle hover underline effect */
+      &:hover:before {
+        transform: translateY(-50%) scaleY(1.2); /* Subtle scaling of the bullet */
       }
     }
   }
@@ -53,21 +68,21 @@ const StyledText = styled.div`
 
 const StyledPic = styled.div`
   position: relative;
-  max-width: 400px; /* Increase max width for desktop screens */
+  max-width: 400px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    max-width: 300px; /* Adjust width for smaller screens */
-    margin: 30px auto; /* Center the image */
+    max-width: 300px;
+    margin: 30px auto;
   }
 
   .wrapper {
     ${({ theme }) => theme.mixins.boxShadow};
     display: block;
     position: relative;
-    width: 100%; /* Maintain full width */
-    height: auto; /* Ensure height adjusts automatically */
-    aspect-ratio: 4 / 5; /* Wider and taller image */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
     border-radius: 15px;
     background-color: var(--blue);
     overflow: visible;
@@ -89,9 +104,9 @@ const StyledPic = styled.div`
 
     .img {
       position: relative;
-      width: 100%; /* Ensures the image fits the wrapper's width */
-      height: 100%; /* Ensures the image scales to fill the wrapper */
-      object-fit: cover; /* Prevents stretching */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 15px;
       mix-blend-mode: normal;
       filter: none;
@@ -118,7 +133,7 @@ const StyledPic = styled.div`
 
     &:after {
       border: 5px solid var(--white);
-      top: 20px; /* Adjusted for alignment */
+      top: 20px;
       left: 25px;
       z-index: -1;
     }
@@ -135,9 +150,9 @@ const About = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
-  }, [prefersReducedMotion]); // Include prefersReducedMotion in the dependency array
+  }, [prefersReducedMotion]);
 
-  const skills = ['JavaScript', 'TypeScript', 'React', 'Python', 'Next.js', 'WordPress', 'Tailwind CSS', 'Git' ];
+  const skills = ['JavaScript', 'TypeScript', 'Python', 'React', 'Tailwind CSS', 'WordPress', 'Next.js', 'Git'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -147,8 +162,8 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello, I’m <strong>Lasha</strong> – Full Stack Developer.  
-              As a Full Stack Developer, I have a comprehensive skill set that spans both front-end and back-end development.  
+              Hello, I’m <strong>Lasha</strong> – Front-End Developer.  
+              As a Front-End Developer, I have a comprehensive skill set that spans both front-end and back-end development.  
               I work with technologies like <strong>JavaScript</strong> and <strong>Python</strong>, and have experience using tools such as the <strong>React</strong> framework.  
               My expertise also includes database management and designing responsive interfaces that work seamlessly across all screen sizes.
             </p>

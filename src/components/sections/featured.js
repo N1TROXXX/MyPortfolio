@@ -115,14 +115,6 @@ const StyledProject = styled.li`
     }
   }
 
-  /* .project-overline {
-    margin: 10px 0;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-    font-weight: 400;
-  } */
-
   .project-title {
     color: var(--lightest-slate);
     font-size: clamp(24px, 5vw, 28px);
@@ -304,6 +296,26 @@ const StyledProject = styled.li`
   }
 `;
 
+const StyledHeading = styled.h2`
+  font-family: var(--font-primary); /* Customize font */
+  font-size: clamp(25px, 5vw, 48px); /* Responsive font size */
+  font-weight: bold;
+  color: var(--lightest-slate);
+  text-align: center; /* Centers the text horizontally */
+  position: relative;
+  margin: 50px 0; /* Adjust the spacing */
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16%;
+    height: 2px;
+    background-color: var(--blue); /* Customize the color */
+    bottom: -5px; /* Gap beneath the text */
+    left: 421px;
+  }
+`;
+
 const Featured = () => {
   const data = useStaticQuery(graphql`
     {
@@ -348,9 +360,9 @@ const Featured = () => {
 
   return (
     <section id="projects">
-      <h2 className="numbered-heading" ref={revealTitle}>
-        Project
-      </h2>
+      <StyledHeading ref={revealTitle}>
+        Projects
+      </StyledHeading>
 
       <StyledProjectsGrid>
         {featuredProjects &&
@@ -363,8 +375,6 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    
-
                     <h3 className="project-title">
                       <a href={external}>{title}</a>
                     </h3>

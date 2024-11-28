@@ -1,0 +1,60 @@
+/* src/components/sections/featured.css */
+
+.featured-projects {
+    padding: 3rem 1.5rem;
+    background-color: #f8f8f8;
+  }
+  
+  .featured-projects h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    display: inline-block; /* Makes it behave like inline block */
+    max-width: 80%; /* Control the width to prevent long line */
+    text-align: left; /* Align the title to the left */
+    margin: 0 auto 1rem auto; /* Center the heading and add spacing below */
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    max-width: 80%; /* Match the width with h3 */
+    margin: 0 auto; /* Center the text block */
+    text-align: left; /* Align the text to the left */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    max-height: 200px;
+  }
+  
