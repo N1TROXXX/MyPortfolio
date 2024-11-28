@@ -2,9 +2,9 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Hi, I'm Lasha - Front-End Developer',
+    title: "Hi, I'm Lasha - Front-End Developer",
     description:
-      'I specialize in building responsive, user-friendly websites, that are both visually appealing and highly functional.',
+      "Hi, I'm full-stack Developer. I specialize in building responsive, user-friendly websites that are both visually appealing and highly functional.",
     siteUrl: 'https://alkhazishvili.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@alkhazishvili2',
