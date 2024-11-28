@@ -12,7 +12,7 @@ const StyledSideElement = styled.div`
   left: ${props => (props.orientation === 'left' ? '40px' : 'auto')};
   right: ${props => (props.orientation === 'left' ? 'auto' : '40px')};
   z-index: 10;
-  color: var(--light-slate);
+  color: var(--blue);
 
   @media (max-width: 1080px) {
     left: ${props => (props.orientation === 'left' ? '20px' : 'auto')};
@@ -34,7 +34,7 @@ const Side = ({ children, isHome, orientation }) => {
     }
     const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [isHome, prefersReducedMotion]); // Add isHome and prefersReducedMotion as dependencies
 
   return (
     <StyledSideElement orientation={orientation}>
