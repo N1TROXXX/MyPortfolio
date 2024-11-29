@@ -21,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
+    background-color: var(--navy);
+    color: var(--blue);
   }
 
   /* Provide basic, default focus styles.*/
@@ -76,12 +76,14 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: var(--navy);
     color: var(--slate);
-    font-family: var(--font-sans);
+    font-weight: bold;
+    font-family: var(--font-mono);
     font-size: var(--fz-xl);
-    line-height: 1.3;
+    line-height: 1;
 
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
+      background-color: var(--navy);
     }
 
     &.hidden {
@@ -164,8 +166,8 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     margin: 0 0 10px 0;
-    font-weight: 600;
-    color: var(--lightest-slate);
+    font-weight: 500;
+    color: var(--white);
     line-height: 1.1;
   }
 
@@ -207,11 +209,11 @@ const GlobalStyle = createGlobalStyle`
       content: '';
       display: block;
       position: relative;
-      top: -5px;
-      width: 300px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: var(--lightest-navy);
+      top: 15px;
+      width: 160px;
+      height: 3px;
+      margin-left: -160px;
+      background-color: var(--blue);
 
       @media (max-width: 1080px) {
         width: 200px;
