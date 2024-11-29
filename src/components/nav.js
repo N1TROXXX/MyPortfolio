@@ -29,6 +29,7 @@ const StyledNav = styled.nav`
   width: 100%;
   color: var(--blue); 
   font-family: var(--font-mono);
+  font-weight: bold;
   z-index: 12;
 
   .logo {
