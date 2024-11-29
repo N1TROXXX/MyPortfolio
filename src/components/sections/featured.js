@@ -297,7 +297,7 @@ const StyledProject = styled.li`
 `;
 
 const StyledHeading = styled.h2`
-  font-family: var(--font-primary); /* Customize font */
+  font-family: var(--primary); /* Customize font */
   font-size: clamp(25px, 5vw, 48px); /* Responsive font size */
   font-weight: bold;
   color: var(--lightest-slate);
@@ -308,11 +308,11 @@ const StyledHeading = styled.h2`
   &::before {
     content: "";
     position: absolute;
-    width: 16%;
+    width: 23%;
     height: 2px;
     background-color: var(--blue); /* Customize the color */
     bottom: -5px; /* Gap beneath the text */
-    left: 421px;
+    left: 385px;
   }
 `;
 
