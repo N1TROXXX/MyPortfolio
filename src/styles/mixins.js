@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const button = css`
   color: var(--yellow);
   background-color: transparent;
-  border: 1px solid var(--yellow);
+  border: 1px solid var(--blue);
   border-radius: var(--border-radius);
   font-size: var(--fz-xs);
   font-family: var(--font-mono);
@@ -46,7 +46,7 @@ const mixins = {
 
     &:hover,
     &:focus-visible {
-      color: var(--yellow);
+      color: var(--blue);
       outline: 0;
     }
   `,
@@ -87,9 +87,9 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--yellow);
+    color: var(--white);
     background-color: transparent;
-    border: 1px solid var(--blue);
+    border: 5px solid var(--blue);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);
