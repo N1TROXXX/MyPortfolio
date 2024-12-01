@@ -57,7 +57,7 @@ const Input = styled.input`
   border-radius: 8px;
   outline: none;
   background-color: transparent;
-  color: yellow;
+  color: gray;
   transition: border-color 0.3s;
 
   &:focus {
