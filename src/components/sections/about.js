@@ -162,8 +162,9 @@ const About = () => {
         <StyledText>
           <div>
             <p>
+  
   Hello, I’m <strong>Lasha</strong>, a Front-End Developer with a passion for building interactive and user-friendly websites and applications.  
-  I specialize in using technologies like <strong>JavaScript</strong>, <strong>Python</strong>, and the <strong>React</strong> framework to create engaging web experiences.  
+  I specialize in using technologies like <strong>JavaScript</strong>, <strong>Python</strong>, and <strong>React</strong> to create engaging web experiences.  
   I also have a strong foundation in back-end development and database management, which allows me to build full-stack solutions and optimize performance across the entire application.
 </p>
 
@@ -172,6 +173,7 @@ const About = () => {
   What excites me most about web development is the constant learning and problem-solving.  
   The ever-evolving nature of the field keeps me motivated, pushes me to refine my skills, and helps me stay updated with the latest technologies, frameworks, and best practices.
 </p>
+
 
 
             <p>Here are a few technologies I’ve been working with recently:</p>
