@@ -162,16 +162,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello, I’m <strong>Lasha</strong> – Front-End Developer.  
-              As a Front-End Developer, I have a comprehensive skill set that spans both front-end and back-end development.  
-              I work with technologies like <strong>JavaScript</strong> and <strong>Python</strong>, and have experience using tools such as the <strong>React</strong> framework.  
-              My expertise also includes database management and designing responsive interfaces that work seamlessly across all screen sizes.
-            </p>
+  Hello, I’m <strong>Lasha</strong>, a Front-End Developer with a passion for building interactive and user-friendly websites and applications.  
+  I specialize in using technologies like <strong>JavaScript</strong>, <strong>Python</strong>, and the <strong>React</strong> framework to create engaging web experiences.  
+  I also have a strong foundation in back-end development and database management, which allows me to build full-stack solutions and optimize performance across the entire application.
+</p>
 
-            <p>
-              What I love most about web development is how it continually challenges me to expand my knowledge and refine my skills.  
-              The ever-evolving nature of the field keeps me motivated and engaged, always pushing me to stay up-to-date with the latest tools and techniques.
-            </p>
+<p>
+  My focus is on designing <strong>responsive</strong>, mobile-friendly interfaces that look great and function smoothly across all devices and screen sizes.  
+  What excites me most about web development is the constant learning and problem-solving.  
+  The ever-evolving nature of the field keeps me motivated, pushes me to refine my skills, and helps me stay updated with the latest technologies, frameworks, and best practices.
+</p>
+
 
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
