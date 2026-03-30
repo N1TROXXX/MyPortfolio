@@ -8,7 +8,7 @@
     "url": "https://github.com/N1TROXXX/MyPortfolio"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "keywords": [
     "gatsby"
